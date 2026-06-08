@@ -1,0 +1,114 @@
+/* Counties.css */
+
+/* Main page wrapper matching standard centered layout */
+#center {
+  max-width: 950px;
+  margin: 3rem auto 1.5rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+}
+
+/* Header section */
+.header {
+  margin-bottom: 1.25rem;
+  background: linear-gradient(180deg, #214d35 0%, #1a3f2c 100%);
+}
+
+#header-title {
+  color: #eef4ec;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Info paragraph block */
+.county-info {
+  margin-bottom: 2.5rem;
+}
+
+#info {
+  color: #4a5568;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Phone link styling inside paragraph */
+#info a {
+  color: #2e7d32;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#info a:hover {
+  color: #1e5222;
+  text-decoration: underline;
+}
+
+/* County buttons wrapper (assumes CountyButtons renders a container) */
+.county-buttons,
+.county-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Optional button styling fallback (if buttons are plain) */
+.county-buttons button,
+.county-buttons a {
+  display: inline-block;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  background-color: #1b3322;
+  color: #ffffff;
+}
+
+.county-buttons button:hover,
+.county-buttons a:hover {
+  background-color: #112015;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #center {
+    padding: 1.75rem 1.25rem;
+    margin: 1.5rem 1rem;
+  }
+
+  #header-title {
+    font-size: 2rem;
+  }
+
+  #info {
+    font-size: 1.05rem;
+  }
+
+  .county-buttons,
+  .county-buttons-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .county-buttons button,
+  .county-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}

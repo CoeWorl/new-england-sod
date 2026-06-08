@@ -1,0 +1,185 @@
+/* ============================================
+   Navbar.css — New England Sod
+   ============================================ */
+
+/* ---------- CSS Variables ---------- */
+:root {
+  --nav-bg: #1a3a1a;
+  --nav-bg-hover: #143014;
+  --nav-accent: #4a9e4a;
+  --nav-accent-hover: #5cb85c;
+  --nav-text: #ffffff;
+  --nav-text-muted: #c8dfc8;
+  --nav-active: #7ec87e;
+  --nav-border-bottom: #4a9e4a;
+  --nav-height: 64px;
+  --nav-font: "Georgia", "Times New Roman", serif;
+  --nav-font-sans: "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  --nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --nav-transition: 0.2s ease;
+}
+
+/* ---------- Base Navbar ---------- */
+.navbar {
+  background-color: var(--nav-bg);
+  border-bottom: 3px solid var(--nav-border-bottom);
+  box-shadow: var(--nav-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: var(--nav-height);
+}
+
+/* ---------- Logo ---------- */
+.nav-logo {
+  font-family: var(--nav-font);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--nav-text);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: color var(--nav-transition);
+}
+
+.nav-logo:hover {
+  color: var(--nav-accent-hover);
+}
+
+/* ---------- Nav Menu (desktop) ---------- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* ---------- Nav Links ---------- */
+.nav-links {
+  font-family: var(--nav-font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--nav-text-muted);
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    color var(--nav-transition),
+    background-color var(--nav-transition);
+}
+
+.nav-links:hover {
+  color: var(--nav-text);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.nav-links.activated {
+  color: var(--nav-active);
+  background-color: rgba(126, 200, 126, 0.1);
+  border-bottom: 2px solid var(--nav-active);
+}
+
+/* ---------- Hamburger Icon (mobile) ---------- */
+.nav-icon {
+  display: none;
+  cursor: pointer;
+  color: var(--nav-text);
+  font-size: 1.5rem;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 1;
+  user-select: none;
+  transition: background-color var(--nav-transition);
+}
+
+.nav-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Mobile Styles ---------- */
+@media (max-width: 900px) {
+  .nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--nav-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 16px 0;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+    pointer-events: none;
+    border-top: 2px solid var(--nav-border-bottom);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .nav-links {
+    display: block;
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    border-radius: 0;
+    border-bottom: none;
+  }
+
+  .nav-links.activated {
+    border-bottom: none;
+    border-left: 3px solid var(--nav-active);
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+}

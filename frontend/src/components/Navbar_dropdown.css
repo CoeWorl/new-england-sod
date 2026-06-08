@@ -1,0 +1,163 @@
+/* ============================================
+   Navbar_dropdown.css — New England Sod
+   ============================================ */
+
+/* ---------- Dropdown Wrapper ---------- */
+.relative {
+  position: relative;
+}
+
+/* ---------- Toggle Button ---------- */
+.toggle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #c8dfc8;
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+  line-height: 1;
+}
+
+.toggle-button:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.toggle-button:focus-visible {
+  outline: 2px solid #7ec87e;
+  outline-offset: 2px;
+}
+
+/* Chevron icon wrapper — fixes a slight class typo in the TSX (m1-2 → spacing) */
+.toggle-button .m1-2 {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+}
+
+/* ---------- Dropdown Panel ---------- */
+.dropdown-items-container {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 210px;
+  background-color: #1a3a1a;
+  border: 1px solid #4a9e4a;
+  border-top: 3px solid #4a9e4a;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+  z-index: 2000;
+  animation: dropdownFadeIn 0.18s ease forwards;
+  overflow: hidden;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Dropdown List ---------- */
+.dropdown-items {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+}
+
+.dropdown-item + .dropdown-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- Links & Buttons inside Dropdown ---------- */
+.dropdown-item-link,
+.dropdown-item-button {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #c8dfc8;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    padding-left 0.15s ease;
+}
+
+.dropdown-item-link:hover,
+.dropdown-item-button:hover {
+  color: #ffffff;
+  background-color: rgba(74, 158, 74, 0.2);
+  padding-left: 26px;
+}
+
+.dropdown-item-link:focus-visible,
+.dropdown-item-button:focus-visible {
+  outline: 2px solid #7ec87e;
+  outline-offset: -2px;
+}
+
+/* ---------- Mobile: dropdown becomes inline ---------- */
+@media (max-width: 900px) {
+  .relative {
+    width: 100%;
+  }
+
+  .toggle-button {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 0.9rem;
+    border-radius: 0;
+    justify-content: space-between;
+  }
+
+  .dropdown-items-container {
+    position: static;
+    border: none;
+    border-top: 1px solid rgba(74, 158, 74, 0.4);
+    border-radius: 0;
+    box-shadow: none;
+    animation: none;
+    background-color: #122b12;
+  }
+
+  .dropdown-item-link,
+  .dropdown-item-button {
+    padding: 12px 44px;
+    font-size: 0.85rem;
+  }
+
+  .dropdown-item-link:hover,
+  .dropdown-item-button:hover {
+    padding-left: 50px;
+  }
+}

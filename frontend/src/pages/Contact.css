@@ -1,0 +1,153 @@
+/* Main Page Layout */
+.info-container {
+  background: linear-gradient(180deg, #214d35 0%, #1a3f2c 100%);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact-info {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-info h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #eef4ec;
+}
+
+.contact-info p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.call-button {
+  margin-top: 2rem;
+  padding: 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.call-button a {
+  display: inline-block;
+  background: white;
+  color: #214d35;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.call-button a:hover {
+  transform: translateY(-2px);
+}
+
+/* Fact Bar Grid */
+.fact-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.fact-bar-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.fact-bar-item h5 {
+  color: #214d35;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.fact-bar-item p {
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Contact Section Grid */
+.contact-forms-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.phone-and-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.phone-container,
+.hours-of-operation,
+.office-address {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.phone-container h3,
+.hours-of-operation h4,
+.office-address h4 {
+  color: #214d35;
+  margin-bottom: 1rem;
+}
+
+.phone-container button {
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  background: #214d35;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#weekdays,
+#saturday,
+#sunday {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+body {
+  background: #f6f7f5;
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .fact-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-forms-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info h1 {
+    font-size: 2.25rem;
+  }
+}

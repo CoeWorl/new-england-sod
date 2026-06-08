@@ -1,0 +1,127 @@
+/* ============================================================
+   Terms.css — Terms & Conditions Page
+   ============================================================ */
+
+/* ── Page header ─────────────────────────────────────────── */
+.terms-header {
+  background: #1e3a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 1.5rem 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grain texture overlay */
+.terms-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.terms-header h5 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9dc491;
+  margin-bottom: 0.85rem;
+  position: relative;
+}
+
+.terms-header h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.terms-header .call-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #1e3a1a;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    transform 150ms ease;
+  position: relative;
+}
+
+.terms-header .call-button:hover {
+  background: #eef4ec;
+  transform: translateY(-1px);
+}
+
+/* ── Terms body ──────────────────────────────────────────── */
+.terms {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 6rem;
+}
+
+.terms h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.6rem;
+}
+
+.terms > p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin-bottom: 2rem;
+}
+
+/* ── Guarantee list ──────────────────────────────────────── */
+.guarantee-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid #e4e0d8;
+}
+
+.guarantee-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #e4e0d8;
+  position: relative;
+}
+
+/* Green left accent bar */
+.guarantee-item::before {
+  content: "";
+  flex-shrink: 0;
+  width: 3px;
+  height: 100%;
+  background: #3a7a2e;
+  border-radius: 2px;
+  align-self: stretch;
+}
+
+.guarantee-item p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2c2416;
+  line-height: 1.55;
+  margin: 0;
+}

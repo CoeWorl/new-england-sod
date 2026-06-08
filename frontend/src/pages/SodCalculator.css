@@ -1,0 +1,254 @@
+.sod-calc-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.calc-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.calc-card-header h2 {
+  color: #1b3322;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form Panel Wrap Box */
+.calc-inputs-panel {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.inputs-form-row {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #344054;
+  margin-bottom: 0.5rem;
+}
+
+.input-field input,
+.input-field select {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #ffffff;
+  opacity: 0.4;
+}
+
+.input-field input:focus,
+.input-field select:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+.toggle-container {
+  display: inline-flex;
+  background-color: #f1f5f9;
+  padding: 3px;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  border: 1px solid #e2e8f0;
+}
+
+.toggle-container button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.toggle-container .active-toggle {
+  background-color: #ffffff;
+  color: #2e7d32;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-field {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.checkbox-field input {
+  margin-right: 0.5rem;
+  accent-color: #2e7d32;
+}
+
+/* Two-column layout grid for Matrix vs Invoice */
+.calc-layout-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  .calc-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Matrix Table Styling */
+.matrix-table-section h3 {
+  font-size: 1.15rem;
+  color: #1b3322;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+}
+
+.matrix-headers {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  padding: 0.75rem 1rem;
+  background-color: #f1f5f9;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #475569;
+  border-radius: 6px 6px 0 0;
+  border: 1px solid #e2e8f0;
+  border-bottom: none;
+}
+
+.matrix-rows {
+  border: 1px solid #e2e8f0;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+
+.matrix-row-item {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.2fr;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.95rem;
+  color: #334155;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.matrix-row-item:last-child {
+  border-bottom: none;
+}
+
+.matrix-row-item .tier-lbl {
+  font-weight: 500;
+}
+
+.matrix-row-item .tier-prc {
+  font-weight: 600;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Highlight tracking row matching current size span */
+.matrix-row-item.active-calculated-row {
+  background-color: #f0fdf4 !important; /* Soft light-green alert box tint */
+  border-left: 4px solid #2e7d32;
+  color: #166534;
+  font-weight: 600;
+}
+
+/* Right Side Summary Invoice Panel */
+.calc-results-section {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.total-price-banner {
+  text-align: center;
+  background-color: #1b3322;
+  color: #ffffff;
+  padding: 1.25rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.total-price-banner h3 {
+  color: #eef4ec;
+  font-size: 2.25rem;
+  margin: 0;
+  font-weight: 800;
+}
+
+.total-price-banner p {
+  margin: 0.25rem 0 0 0;
+  opacity: 0.85;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.breakdown-row.sub-cost {
+  color: #475569;
+}
+
+.breakdown-row.alert-fee {
+  color: #b91c1c;
+  text-align: left;
+  font-size: 14px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e2e8f0;
+  margin: 1rem 0;
+}
+
+.calc-call-cta {
+  display: block;
+  text-align: center;
+  background-color: #2e7d32;
+  color: #ffffff;
+  padding: 0.85rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 6px;
+  margin-top: auto;
+  transition: background-color 0.15s ease;
+}
+
+.calc-call-cta:hover {
+  background-color: #1e5222;
+}

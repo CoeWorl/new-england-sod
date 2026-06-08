@@ -1,0 +1,61 @@
+/* ============================================
+   Header.css — New England Sod
+   Top info bar above the Navbar
+   ============================================ */
+
+:root {
+  --header-bg: #122b12;
+  --header-text: #eef4ec;
+  --header-divider: #c5d9c0;
+  --header-font: "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- Header Bar ---------- */
+.header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid rgba(74, 158, 74, 0.3);
+  width: 100%;
+}
+
+/* ---------- Info Row ---------- */
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 7px 24px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Individual Info Spans ---------- */
+#header-info {
+  font-family: var(--header-font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--header-text);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---------- Divider Pipes ---------- */
+.header-info span:not(#header-info) {
+  color: var(--header-divider);
+  font-size: 0.7rem;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 480px) {
+  .header-info {
+    gap: 8px;
+    padding: 6px 16px;
+  }
+
+  #header-info {
+    font-size: 0.72rem;
+  }
+}

@@ -1,0 +1,162 @@
+/* SodInstallation.css */
+
+/* Container wrapper following the standard page layout alignments */
+.info-container {
+  max-width: 950px;
+  margin: 3rem auto 1.5rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-align: center;
+}
+
+/* Header Text Styles matching Fairfield/Home titles */
+.info-blob {
+  background: linear-gradient(180deg, #214d35 0%, #1a3f2c 100%);
+}
+.info-blob h1 {
+  color: #eef4ec;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+#info-para {
+  color: #eef4ec;
+  font-size: 1.15rem;
+  line-height: 1.65;
+  max-width: 800px;
+  margin: 0 auto 2.5rem auto;
+}
+
+/* Call-to-Action Action Buttons Wrapper */
+.info-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* Button & Link UI Elements matching existing interactive features */
+.info-buttons button,
+.info-buttons a {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  border: none;
+}
+
+/* Primary Accent Colors (Call / Calculate targets) */
+#call-button button {
+  background-color: #1b3322;
+  color: #ffffff;
+}
+
+#call-button button:hover {
+  background-color: #112015;
+}
+
+#calc-button a {
+  background-color: #2e7d32;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.15);
+}
+
+#calc-button a:hover {
+  background-color: #1e5222;
+}
+
+/* Secondary ghost outline styling (Contact request target) */
+#contact-button a {
+  background-color: #ffffff;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+#contact-button a:hover {
+  background-color: rgba(46, 125, 50, 0.04);
+}
+
+/* --- Stats Rows Component matching Fairfield's metric display look --- */
+.stats-container {
+  max-width: 950px;
+  margin: 0 auto 3rem auto;
+  padding: 0 2.5rem;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Big Bold Top Numbers Layout Row */
+.bold-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  border-top: 1px solid #edf2f7;
+  padding-top: 1.5rem;
+}
+
+#bold-stats-info {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #1b3322;
+}
+
+/* Sub-label descriptions matching small-county-info spacing */
+.small-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+#small-stats-info {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #718096;
+  line-height: 1.4;
+}
+
+/* Responsive Scaling for Tablets and Mobile Viewports */
+@media (max-width: 768px) {
+  .info-container {
+    padding: 1.75rem 1.25rem;
+    margin: 1.5rem 1rem;
+  }
+
+  .info-blob h1 {
+    font-size: 2rem;
+  }
+
+  .info-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .info-buttons span,
+  .info-buttons button,
+  .info-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .bold-stats,
+  .small-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+  }
+}

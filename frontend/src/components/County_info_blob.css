@@ -1,0 +1,81 @@
+/* County_info_blob.css */
+
+#center {
+  padding: 3rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.header #header-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #eef4ec;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.county-info #info {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568; /* Soft slate/charcoal gray */
+  margin-bottom: 2rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.county-info #info a {
+  color: #2e7d32; /* Rich grass green */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.county-info #info a:hover {
+  text-decoration: underline;
+}
+
+/* Call Button styling mimicking the premium CT Sod main CTAs */
+.call-button #call {
+  background-color: #2e7d32; /* Primary Green */
+  color: #ffffff;
+  border: none;
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.call-button #call:hover {
+  background-color: #1e5222; /* Darker green on hover */
+  transform: translateY(-1px);
+}
+
+/* Calculator link text button styling */
+.calculator-link-button {
+  margin-top: 0.5rem;
+}
+
+.calculator-link-button #calc-link {
+  display: inline-block;
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.calculator-link-button #calc-link:hover {
+  border-color: #2e7d32;
+}

@@ -1,0 +1,281 @@
+/* ============================================================
+   ForTheTrade.css — Trade Audience Landing Page
+   ============================================================ */
+
+/* ── Page header ─────────────────────────────────────────── */
+.info-header {
+  background: #1e3a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 5.5rem 1.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 100%,
+    rgba(58, 122, 46, 0.25) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.info-header h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  max-width: 760px;
+  margin: 0 auto 1.4rem;
+  position: relative;
+}
+
+.info-header > p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+.info-header .call-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #1e3a1a;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 180ms ease,
+    transform 140ms ease;
+  position: relative;
+  margin-bottom: 0.6rem;
+}
+
+.info-header .call-button:hover {
+  background: #eef4ec;
+  transform: translateY(-1px);
+}
+
+.info-header > p:last-child {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+/* ── Resource bar — 3-column audience cards ──────────────── */
+.resource-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0;
+  border-bottom: 1px solid #e4e0d8;
+}
+
+.contractor-container,
+.designer-container,
+.golf-course-container {
+  padding: 2.75rem 2rem;
+  border-right: 1px solid #e4e0d8;
+  position: relative;
+  transition: background 200ms ease;
+}
+
+.golf-course-container {
+  border-right: none;
+}
+
+.contractor-container:hover,
+.designer-container:hover,
+.golf-course-container:hover {
+  background: #faf9f6;
+}
+
+/* Top accent stripe on hover */
+.contractor-container::before,
+.designer-container::before,
+.golf-course-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #3a7a2e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.contractor-container:hover::before,
+.designer-container:hover::before,
+.golf-course-container:hover::before {
+  transform: scaleX(1);
+}
+
+.contractor-container h5,
+.designer-container h5,
+.golf-course-container h5 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a7a2e;
+  margin-bottom: 0.6rem;
+}
+
+.contractor-container h3,
+.designer-container h3,
+.golf-course-container h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.3;
+  margin-bottom: 0.85rem;
+}
+
+.contractor-container p,
+.designer-container p,
+.golf-course-container p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+}
+
+.contractor-container a,
+.designer-container a,
+.golf-course-container a {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d5c25;
+  text-decoration: none;
+  border-bottom: 1.5px solid #c5d9c0;
+  padding-bottom: 1px;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.contractor-container a:hover,
+.designer-container a:hover,
+.golf-course-container a:hover {
+  color: #1e3a1a;
+  border-color: #1e3a1a;
+}
+
+/* ── Why container ───────────────────────────────────────── */
+.why-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 6rem;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.why-header h5 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a7a2e;
+  display: inline-block;
+  background: #eef4ec;
+  border: 1px solid #c5d9c0;
+  border-radius: 100px;
+  padding: 0.28rem 0.85rem;
+  margin-bottom: 0.9rem;
+}
+
+.why-header h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.2;
+}
+
+/* ── Why grid ────────────────────────────────────────────── */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-grid-item {
+  background: #faf9f6;
+  border: 1px solid #e4e0d8;
+  border-radius: 10px;
+  padding: 1.75rem 1.75rem 2rem;
+  transition:
+    box-shadow 200ms ease,
+    transform 200ms ease;
+}
+
+.why-grid-item:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+.why-grid-item h4 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e3a1a;
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+}
+
+/* Green dot prefix */
+.why-grid-item h4::before {
+  content: "● ";
+  font-size: 0.6rem;
+  color: #3a7a2e;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+
+.why-grid-item p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .resource-bar {
+    grid-template-columns: 1fr;
+  }
+  .contractor-container,
+  .designer-container,
+  .golf-course-container {
+    border-right: none;
+    border-bottom: 1px solid #e4e0d8;
+  }
+  .golf-course-container {
+    border-bottom: none;
+  }
+}

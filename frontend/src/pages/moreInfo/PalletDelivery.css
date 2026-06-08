@@ -1,0 +1,301 @@
+/* ============================================================
+   PalletDelivery.css — Reconfigured to match ForTheTrade.css
+   ============================================================ */
+
+/* ── Global & Typography ────────────────────────────────── */
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #1a1a1a;
+  margin-top: 0;
+}
+
+/* ── Page Header ────────────────────────────────────────── */
+.delivery-header {
+  background: #1e3a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 5.5rem 1.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.delivery-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 100%,
+    rgba(58, 122, 46, 0.25) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.delivery-header h5 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3a7a2e;
+  display: inline-block;
+  background: #eef4ec;
+  border: 1px solid #c5d9c0;
+  border-radius: 100px;
+  padding: 0.28rem 0.85rem;
+  margin-bottom: 0.9rem;
+}
+
+.delivery-header h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  max-width: 760px;
+  margin: 0 auto 1.4rem;
+  position: relative;
+}
+
+.delivery-header p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 620px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+/* ── Buttons ────────────────────────────────────────────── */
+.call-button,
+.calc-button,
+.contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: #1e3a1a;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    transform 140ms ease;
+  position: relative;
+  margin: 0.5rem;
+  border: none;
+}
+
+.call-button:hover,
+.calc-button:hover,
+.contact-button:hover {
+  background: #eef4ec;
+  transform: translateY(-1px);
+}
+
+/* Alternate buttons handling to preserve distinction, but with layout values */
+.calc-button {
+  background: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+}
+.calc-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.contact-button {
+  background: #3a7a2e;
+  color: #ffffff;
+}
+.contact-button:hover {
+  background: #2d5c25;
+}
+
+/* ── Main Content Container ─────────────────────────────── */
+.info-blob {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 6rem;
+}
+
+.info-blob h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  color: #cef9d3;
+  line-height: 1.2;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-blob p {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.9rem;
+  color: #eef4ec;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Lists transformed into 3-column structures ─────────── */
+.size-list,
+.specs-list,
+.delivery-instructions,
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0;
+  border-bottom: 1px solid #e4e0d8;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.size-list li,
+.specs-list li,
+.delivery-instructions li,
+.service-list li {
+  list-style: none;
+  padding: 2.75rem 2rem;
+  border-right: 1px solid #e4e0d8;
+  border-bottom: none;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  transition: background 200ms ease;
+}
+
+.size-list li:last-child,
+.specs-list li:last-child,
+.delivery-instructions li:last-child,
+.service-list li:last-child {
+  border-right: none;
+}
+
+.size-list li:hover,
+.specs-list li:hover,
+.delivery-instructions li:hover,
+.service-list li:hover {
+  background: #173a1b;
+}
+
+/* Top accent stripe on card hover */
+.size-list li::before,
+.specs-list li::before,
+.delivery-instructions li::before,
+.service-list li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #3a7a2e;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 220ms ease;
+}
+
+.size-list li:hover::before,
+.specs-list li:hover::before,
+.delivery-instructions li:hover::before,
+.service-list li:hover::before {
+  transform: scaleX(1);
+}
+
+/* Text rules for list entities mimicking grid structures */
+.size-list li h4,
+.specs-list li h4,
+.delivery-instructions li h4,
+.service-list li h4 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e3a1a;
+  margin-bottom: 0.65rem;
+  line-height: 1.35;
+}
+
+/* ── Inline Links ───────────────────────────────────────── */
+.info-blob a {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #83c178;
+  text-decoration: none;
+  border-bottom: 1.5px solid #c5d9c0;
+  padding-bottom: 1px;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.info-blob a:hover {
+  color: #e6f7e4;
+  border-color: #e6f7e4;
+  text-decoration: none;
+}
+
+/* ── Custom Sections / Div structures ───────────────────── */
+.info-blob > div {
+  margin: 2rem 0;
+}
+
+/* ── Mobile Viewports ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .delivery-header {
+    padding: 4rem 1.5rem;
+  }
+
+  .call-button,
+  .calc-button,
+  .contact-button {
+    display: flex;
+    width: 100%;
+    max-width: 320px;
+    margin: 1rem auto;
+    box-sizing: border-box;
+  }
+
+  .info-blob h3 {
+    font-size: 1.8rem;
+  }
+
+  .size-list,
+  .specs-list,
+  .delivery-instructions,
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .size-list li,
+  .specs-list li,
+  .delivery-instructions li,
+  .service-list li {
+    border-right: none;
+    border-bottom: 1px solid #e4e0d8;
+  }
+
+  .size-list li:last-child,
+  .specs-list li:last-child,
+  .delivery-instructions li:last-child,
+  .service-list li:last-child {
+    border-bottom: none;
+  }
+}

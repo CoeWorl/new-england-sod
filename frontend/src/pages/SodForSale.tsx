@@ -35,7 +35,7 @@ export default function SodForSale() {
         </p>
       </div>
       <Pricing />
-      <div className="call-button">
+      <div className="bottom-call-button">
         <a className="bottom-call-btn" href="tel:+18001234567">
           Call 1-800-123-4567
         </a>
